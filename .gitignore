@@ -1,0 +1,12 @@
+# Project place file
+/stateMachine.rbxlx
+/.luaurc
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+.vscode/
+
+
+sourcemap.json
