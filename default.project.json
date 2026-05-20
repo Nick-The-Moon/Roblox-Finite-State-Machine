@@ -1,26 +1,18 @@
 {
   "name": "stateMachine",
-  "tree": {
+  "tree" : {
     "$className": "DataModel",
-
-    "ReplicatedStorage": {
-      "Shared": {
-        "$path": "src/shared"
-      }
-    },
-
+    
     "ServerScriptService": {
-      "Server": {
-        "$path": "src/server"
+      "$className" : "ServerScriptService",
+      "server" : {
+        "$path" : "dev/server"
+      },
+      "Finite_state_machine" : {
+        "$path" : "Fsm"
       }
-    },
-
-    "StarterPlayer": {
-      "StarterPlayerScripts": {
-        "Client": {
-          "$path": "src/client"
-        }
-      }
+    
     }
   }
+     
 }
