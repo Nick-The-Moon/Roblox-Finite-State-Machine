@@ -1,5 +1,5 @@
-local FsmTypes = require(script.Parent.FsmTypes)
-local StatesValidator = require(script.Parent.StatesValidator)
+local FsmTypes = require(script.FsmTypes)
+local StatesValidator = require(script.StatesValidator)
 local StateMachine = {}
 StateMachine.__index = StateMachine
 
@@ -16,6 +16,7 @@ function StateMachine.new(states: { ["string"]: FsmTypes.State }, initialState: 
 		-- print(state or "state is nil")
 		StatesValidator.ValidateState(state)
 	end
+	self._currentState:Enter(nil, self.context)
 	return self
 end
 

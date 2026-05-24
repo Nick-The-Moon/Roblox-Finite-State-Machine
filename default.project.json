@@ -6,12 +6,17 @@
     "ServerScriptService": {
       "$className" : "ServerScriptService",
       "server" : {
-        "$path" : "dev/server"
-      },
-      "Finite_state_machine" : {
-        "$path" : "Fsm"
+        "$className" : "Folder",
+        "bootsrap" : {
+           "$path" : "dev/server/Bootsrap.server.luau"
+        },
+        "Finite_state_machine" : {
+          "$path" : "Fsm"
+        },
+        "examples" : {
+          "$path" : "examples"
+        }
       }
-    
     }
   }
      
