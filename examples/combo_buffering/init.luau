@@ -14,10 +14,10 @@ local states: { [string]: FsmTypes.State } = {
 			return true
 		end,
 		Enter = function(_self, _context)
-			print("starting idle")
+			-- print("starting idle")
 		end,
 		Exit = function(_self, _context)
-			print("exiting idle")
+			-- print("exiting idle")
 		end,
 		Update = function(_self, _dt, _context)
 			--e.g logic here
@@ -46,19 +46,19 @@ local states: { [string]: FsmTypes.State } = {
 				)
 		end,
 		Enter = function(self, context)
-			print("starting", self.Name)
+			-- print("starting", self.Name)
 			context.isAttacking = true
 			context.loop = 0
 			context.loopEnd = 1 -- seconds to timer end
 		end,
 		Exit = function(self, context)
-			print("exiting", self.Name)
+			-- print("exiting", self.Name)
 			context.isAttacking = false
 		end,
 		Update = function(self, dt, context)
 			context.loop = context.loop + dt
 			if context.loopEnd <= context.loop then
-				print("request combo")
+				-- print("request combo")
 				context.FSM:TransitionTo({
 					State = context.States.combo,
 					Priority = 2,
@@ -81,12 +81,12 @@ local states: { [string]: FsmTypes.State } = {
 			return tick() > context.StunTimer
 		end,
 		Enter = function(self, context)
-			print("starting", self.Name)
+			-- print("starting", self.Name)
 			local stunTimmer = 0.3
 			context.StunTimer = tick() + stunTimmer
 		end,
 		Exit = function(self, context)
-			print("exiting", self.Name)
+			-- print("exiting", self.Name)
 		end,
 		Update = function(self, dt, context)
 			if tick() > context.StunTimer then
@@ -112,10 +112,10 @@ local states: { [string]: FsmTypes.State } = {
 			return true
 		end,
 		Enter = function(self, context)
-			print("starting", self.Name)
+			-- print("starting", self.Name)
 		end,
 		Exit = function(self, context)
-			print("exiting", self.Name)
+			-- print("exiting", self.Name)
 		end,
 		Update = function(self, dt, context)
 			--logic

@@ -19,6 +19,21 @@ export type transitionRequest = {
 	--debug:
 	reason: string?,
 }
+
+export type transtitionFormated = {
+	State: State,
+	Priority: number,
+	source: string,
+	LifeTime: number,
+	--debug:
+	reason: string?,
+	_runtime: {
+		Status: string,
+		LastFailureReason: string?,
+		LastFailureState: string?,
+	},
+}
+
 export type ForceTranstionFlags = {
 	ClearQueue: boolean,
 	SkipExit: boolean,
